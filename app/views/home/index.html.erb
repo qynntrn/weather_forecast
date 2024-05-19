@@ -1,0 +1,158 @@
+<style>
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#child3 {
+  position: absolute;
+  border: 1px;
+  top: 175px;
+  right: 110px;
+}
+
+</style>
+
+<div class="container-fluid contact py-2">
+    <div class="container py-2">
+        <div class="p-5 rounded" style="background-color: #e3f2fd;">
+            <div class="row g-2">
+                <div class="col-lg-8">
+                    <div class="d-flex p-4 rounded mb-4 bg-white text-center mx-auto">
+                        <div class="text-center mx-auto" style="max-width: 700px;">
+                            <h1 class="text-primary"><%= @data["location"]["name"]%></h1>
+                            <h5 class="text-dark"> <%= @forecast[0]["date"]%> </h5>
+                            <img class="card-img-top" src="https:<%=@current["condition"]["icon"]%>" alt="Card image cap">
+                            <p class="mb-2"><%= @current["condition"]["text"] %></p>
+                            <p class="mb-2">Temperate: <%= @current["temp_c"] %>°C</p>
+                            <p class="mb-2">Wind: <%= @current["wind_kph"] %> Kph</p>
+                            <p class="mb-2">Humidity: <%= @current["humidity"] %>%</p>
+                            <p class="mb-2">UV: <%= @current["uv"] %></p>
+                            <p class="mb-2">UV: <%= Date.today.send(:-, 1.day) %></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex p-4 rounded mb-4 bg-white" style="height: 13rem;">
+                        <div class="input-group mb-3">
+                            <h4 class="text-center mx-auto">Register</h4>
+                            <p class="mb-2">Register to receive daily weather forecast information via email address. </p>
+                            <%= link_to "Sign Up!", new_user_registration_path, class:"btn btn-warning center" %>
+                        </div>
+                    </div>
+                    <div class="d-flex p-4 rounded mb-4 bg-white position-relative" style="height: 14.5rem;">
+                        <i class="fas fa-envelope fa-2x text-primary me-4"></i>
+                        <div>
+                            <h4 class="text-center mx-auto">Unsubscribe</h4>
+                            <p class="mb-3">Please re-enter your email to unsubscribe. </p>
+                            <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="button-addon2">
+                            <button class="btn btn-warning" id="child3" type="button" id="button-addon2">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid featurs py-2">
+    <div class="container py-2">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="featurs-item text-center rounded bg-light p-4">
+                    <div class="featurs-icon btn-square rounded-circle bg-secondary mb-2 mx-auto">
+                        <i class="fas fa-car-side fa-3x text-white"></i>
+                    </div>
+                    <div class="featurs-content text-center">
+                        <%= @forecast[1]["date"]%>
+                        <img class="card-img-top" src="https:<%=@forecast[1]["day"]["condition"]["icon"]%>" alt="Card image cap">
+                        <p class="mb-2"><%= @forecast[1]["day"]["condition"]["text"] %></p>
+                        <p class="mb-2">Temperate: <%= @forecast[1]["day"]["avgtemp_c"] %>°C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="featurs-item text-center rounded bg-light p-4">
+                    <div class="featurs-icon btn-square rounded-circle bg-secondary mb-2 mx-auto">
+                        <i class="fas fa-user-shield fa-3x text-white"></i>
+                    </div>
+                    <div class="featurs-content text-center">
+                        <%= @forecast[2]["date"]%>
+                        <img class="card-img-top" src="https:<%=@forecast[2]["day"]["condition"]["icon"]%>" alt="Card image cap">
+                        <p class="mb-2"><%= @forecast[2]["day"]["condition"]["text"] %></p>
+                        <p class="mb-2">Temperate: <%= @forecast[2]["day"]["avgtemp_c"] %>°C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="featurs-item text-center rounded bg-light p-4">
+                    <div class="featurs-icon btn-square rounded-circle bg-secondary mb-2 mx-auto">
+                        <i class="fas fa-exchange-alt fa-3x text-white"></i>
+                    </div>
+                    <div class="featurs-content text-center">
+                        <%= @forecast[3]["date"]%>
+                        <img class="card-img-top" src="https:<%=@forecast[3]["day"]["condition"]["icon"]%>" alt="Card image cap">
+                        <p class="mb-2"><%= @forecast[3]["day"]["condition"]["text"] %></p>
+                        <p class="mb-2">Temperate: <%= @forecast[3]["day"]["avgtemp_c"] %>°C</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="featurs-item text-center rounded bg-light p-4">
+                    <div class="featurs-icon btn-square rounded-circle bg-secondary mb-2 mx-auto">
+                        <i class="fa fa-phone-alt fa-3x text-white"></i>
+                    </div>
+                    <div class="featurs-content text-center">
+                        <%= @forecast[4]["date"]%>
+                        <img class="card-img-top" src="https:<%=@forecast[4]["day"]["condition"]["icon"]%>" alt="Card image cap">
+                        <p class="mb-2"><%= @forecast[4]["day"]["condition"]["text"] %></p>
+                        <p class="mb-2">Temperate: <%= @forecast[4]["day"]["avgtemp_c"] %>°C</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid contact py-2">
+    <div class="container py-2">
+        <div class="p-5 rounded bg-light">
+            <div class="text-center mx-auto" style="max-width: 700px;">
+                <h1 class="text-primary">History</h1>
+            </div>
+            <table class="table table-bordered">
+                <thead class="table-primary">
+                    <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Weather</th>
+                    <th scope="col">Temperate</th>
+                    <th scope="col">Humidity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><%= @last1[0]["date"] %></th>
+                        <td><%= @last1[0]["day"]["condition"]["text"] %></td>
+                        <td><%= @last1[0]["day"]["avgtemp_c"] %></td>
+                        <td><%= @last1[0]["day"]["avghumidity"] %></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><%= @last2[0]["date"] %></th>
+                        <td><%= @last2[0]["day"]["condition"]["text"] %></td>
+                        <td><%= @last2[0]["day"]["avgtemp_c"] %></td>
+                        <td><%= @last2[0]["day"]["avghumidity"] %></td>
+                    </tr>       
+                </tbody>
+                </table>
+        </div>
+    </div>
+</div>
+
