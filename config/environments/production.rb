@@ -21,6 +21,12 @@ Rails.application.configure do
   config.action_mailer.default_url_options = {
     host: 'railsweatherforecast-5fb5a5e23879.herokuapp.com'
   }
+  config.action_mailer.delivery_method = :smtp
+  # SMTP settings for mailcatcher gem.
+  config.action_mailer.smtp_settings = {
+    address: '127.0.0.1', 
+    port: 1025
+  }
 
 
   # Ensures that a master key has been made available in ENV["RAILS_MASTER_KEY"], config/master.key, or an environment
