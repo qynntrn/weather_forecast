@@ -18,7 +18,9 @@ Rails.application.configure do
 
   
   
-  config.action_mailer.default_url = {host: "railsweatherforecast-5fb5a5e23879.herokuapp.com"}
+  config.action_mailer.default_url_options = {
+    host: 'railsweatherforecast-5fb5a5e23879.herokuapp.com'
+  }
 
 
   # Ensures that a master key has been made available in ENV["RAILS_MASTER_KEY"], config/master.key, or an environment
