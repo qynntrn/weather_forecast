@@ -7,14 +7,12 @@
 ```
 # Content:
 
-```
-    website with functions such as viewing current weather, weather forecast, recent weather, searching by area, receiving weather notifications via email (under construction)
-```
+The website with functions such as viewing current weather, weather forecast, recent weather, searching by area, receiving weather notifications via email (under construction)
 
 # Deloy:
 ```
     Link: https://railsweatherforecast-5fb5a5e23879.herokuapp.com
-``
+```
 
 # Working with Git
 
@@ -30,7 +28,7 @@
 # Workflow with git when adding new features:
 
 ```
-  1. `git checkout master`
+  1. `git checkout main`
   2. `git pull`
   3. `git checkout -b Feature/MyBranch`
 ```
@@ -38,7 +36,7 @@
 # **Pull Request** creation process
 
 ```
-  1. `git checkout master`
+  1. `git checkout main`
   2. `git pull`
   3. `git checkout Feature/MyBranch`
   4. `git merge main`
