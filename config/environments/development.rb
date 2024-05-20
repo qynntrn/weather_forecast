@@ -15,7 +15,7 @@ Rails.application.configure do
   config.consider_all_requests_local = true
 
   config.action_mailer.default_url_options = {
-    host: 'railsweatherforecast-5fb5a5e23879.herokuapp.com'
+    host: 'localhost:3000'
   }
   config.action_mailer.delivery_method = :smtp
   # SMTP settings for mailcatcher gem.
