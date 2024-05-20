@@ -16,7 +16,9 @@ Rails.application.configure do
   config.consider_all_requests_local = false
   config.action_controller.perform_caching = true
 
-  config.action_mailer.default_url = {host: "https://railsweatherforecast-5fb5a5e23879.herokuapp.com"}
+  
+  
+  config.action_mailer.default_url = {host: "railsweatherforecast-5fb5a5e23879.herokuapp.com"}
 
 
   # Ensures that a master key has been made available in ENV["RAILS_MASTER_KEY"], config/master.key, or an environment
