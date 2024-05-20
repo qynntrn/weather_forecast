@@ -7,7 +7,11 @@
 ```
 # Content:
 
-The website with functions such as viewing current weather, weather forecast, recent weather, searching by area, receiving weather notifications via email (under construction)
+The website with functions such as 
+  - Viewing current weather
+  - Weather forecast, recent weather
+  - Searching by area
+  - Receiving weather notifications via email (under construction)
 
 # Deloy:
 ```
