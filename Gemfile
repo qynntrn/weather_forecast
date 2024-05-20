@@ -60,10 +60,10 @@ group :development do
   # gem "spring"
 end
 
-# group :production do
-#   gem 'pg', '~> 1.2', '>= 1.2.3'
-#   #gem 'rails_12factor', '0.0.2'
-# end
+group :production do
+  gem 'pg', '~> 1.2', '>= 1.2.3'
+  #gem 'rails_12factor', '0.0.2'
+end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
