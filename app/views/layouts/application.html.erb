@@ -19,9 +19,10 @@
     <%= render 'home/header'%>
     <div class="container">
       <br/>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    <%= yield %>
+      <% if notice %>
+      <%= render 'layouts/alerts' %>
+      <% end %>
+      <%= yield %>
     </div>
 
     <!-- Optional JavaScript -->
